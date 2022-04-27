@@ -5,10 +5,10 @@
 */
 
 :root {
-    --jp-cell-status-queue: rgba(165, 236, 246, 0.5);
-    --jp-cell-status-success: rgba(0, 255, 0, 0.5);
-    --jp-cell-status-error: rgba(255, 0, 0, 0.5);
-  }
+    --jp-cell-status-queue: rgba(165, 236, 246, 50%);
+    --jp-cell-status-success: rgba(0, 255, 0, 50%);
+    --jp-cell-status-error: rgba(255, 0, 0, 50%);
+}
 
 
 .executed-success {
