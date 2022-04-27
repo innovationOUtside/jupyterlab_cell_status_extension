@@ -1,0 +1,37 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2022-04-27T15:03:39.314497Z",
+      "format": null,
+      "last_modified": "2022-04-27T15:03:16.258522Z",
+      "mimetype": null,
+      "name": "jupyerlab_cell_status_demo.ipynb",
+      "path": "jupyerlab_cell_status_demo.ipynb",
+      "size": 76665,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2022-04-27T15:03:39.314497Z",
+      "format": null,
+      "last_modified": "2022-04-27T15:03:37.398497Z",
+      "mimetype": "text/markdown",
+      "name": "README.md",
+      "path": "README.md",
+      "size": 88,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2022-04-27T15:03:39.314497Z",
+  "format": "json",
+  "last_modified": "2022-04-27T15:03:39.314497Z",
+  "mimetype": null,
+  "name": "",
+  "path": "",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
