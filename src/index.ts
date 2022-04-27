@@ -66,7 +66,8 @@ function activate (
     NotebookActions.executionScheduled.connect((_, args) => {
       const { cell } = args;
       if (cell.model.type == 'code') {
-        cell.inputArea.promptNode.classList.remove("executed");
+        cell.inputArea.promptNode.classList.remove("executed-success");
+        cell.inputArea.promptNode.classList.remove("executed-error");
         cell.inputArea.promptNode.classList.add("scheduled");
       }
     });  

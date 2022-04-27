@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab_cell_status_extension",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Indicate cell status",
   "keywords": [
     "jupyter",
