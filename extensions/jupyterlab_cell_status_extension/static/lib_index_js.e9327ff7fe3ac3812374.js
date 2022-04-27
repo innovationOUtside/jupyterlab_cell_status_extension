@@ -71,18 +71,11 @@ function activate(app, settingRegistry) {
     _jupyterlab_notebook__WEBPACK_IMPORTED_MODULE_0__.NotebookActions.executionScheduled.connect((_, args) => {
         const { cell } = args;
         if (cell.model.type == 'code') {
-            cell.inputArea.promptNode.classList.remove("executed");
+            cell.inputArea.promptNode.classList.remove("executed-success");
+            cell.inputArea.promptNode.classList.remove("executed-error");
             cell.inputArea.promptNode.classList.add("scheduled");
         }
     });
-    // If the kernel is stopped, we need to clear all the status indications
-    // https://jupyterlab.readthedocs.io/en/3.1.x/api/modules/services.kernel.html#connectionstatus
-    // Status based on IKernelConnection
-    // Clear classes on the following Status values?
-    //"starting"  "terminating" | "restarting" | "autorestarting" | "dead"
-    // or maybe just starting and restarting?
-    // Cell status should reflect likely state...
-    // We could add a button to clear status settings
     console.log("jupyterlab_cell_status:plugin activated...");
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (plugin);
@@ -91,4 +84,4 @@ function activate(app, settingRegistry) {
 /***/ })
 
 }]);
-//# sourceMappingURL=lib_index_js.bdc9b9eb591a695fdc61.js.map
+//# sourceMappingURL=lib_index_js.e9327ff7fe3ac3812374.js.map

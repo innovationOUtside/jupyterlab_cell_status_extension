@@ -613,7 +613,7 @@
               "singleton": true
             },
             "jupyterlab_cell_status_extension": {
-              "version": "0.1.0",
+              "version": "0.1.2",
               "singleton": true,
               "import": "/Users/tonyhirst/Documents/GitHub/jupyterlab_cell_status_extension/lib/index.js"
             }
