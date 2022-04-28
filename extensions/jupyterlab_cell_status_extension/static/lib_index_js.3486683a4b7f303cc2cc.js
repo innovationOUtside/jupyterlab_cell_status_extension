@@ -20,7 +20,7 @@ __webpack_require__.r(__webpack_exports__);
 //import { IKernelConnection } from '@jupyterlab/services/Kernel IKernelConnection';
 
 /**
- * Initialization data for the jupyterlab-cell-flash extension.
+ * Initialization data for the jupyterlab_cell_status extension.
  */
 const plugin = {
     activate,
@@ -48,7 +48,7 @@ function activate(app, settingRegistry) {
             settings.changed.connect(updateSettings);
         })
             .catch(reason => {
-            console.error('Failed to load settings for jupyterlab_cell_status_extension.', reason);
+            console.error('Failed to load settings for jupyterlab_cell_status.', reason);
         });
     }
     /*
@@ -84,4 +84,4 @@ function activate(app, settingRegistry) {
 /***/ })
 
 }]);
-//# sourceMappingURL=lib_index_js.e9327ff7fe3ac3812374.js.map
+//# sourceMappingURL=lib_index_js.3486683a4b7f303cc2cc.js.map
