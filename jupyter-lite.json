@@ -15,7 +15,7 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.45def3ccc5b8cb5d06c4.js",
+        "load": "static/remoteEntry.3e2be5c4797fcbef75f6.js",
         "name": "jupyterlab_cell_status_extension",
         "style": "./style"
       },

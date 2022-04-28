@@ -35,16 +35,17 @@ function activate(app, settingRegistry) {
             .load(plugin.id)
             .then(settings => {
             console.log("jupyterlab_cell_status_extension:plugin: loading settings...");
-            //const root = document.documentElement;
+            const root = document.documentElement;
             const updateSettings = () => {
-                /*
-                const queue_color = settings.get('status_queue').composite as string;
-                const success_color = settings.get('status_success').composite as string;
+                console.log("jupyterlab_cell_status_extension:plugin: get setting...");
+                const queue_color = settings.get('status_queue').composite;
+                /*const success_color = settings.get('status_success').composite as string;
                 const error_color = settings.get('status_error').composite as string;
-                root.style.setProperty('--jp-cell-status-queue', queue_color);
-                root.style.setProperty('--jp-cell-status-success', success_color);
-                root.style.setProperty('--jp-cell-status-error', error_color);
                 */
+                console.log("jupyterlab_cell_status_extension:plugin: set root param...");
+                root.style.setProperty('--jp-cell-status-queue', queue_color);
+                //root.style.setProperty('--jp-cell-status-success', success_color);
+                //root.style.setProperty('--jp-cell-status-error', error_color);
             };
             updateSettings();
             console.log("jupyterlab_cell_status_extension:plugin: loaded settings...");
@@ -88,4 +89,4 @@ function activate(app, settingRegistry) {
 /***/ })
 
 }]);
-//# sourceMappingURL=lib_index_js.fdef140ec5f87304147d.js.map
+//# sourceMappingURL=lib_index_js.7faf53c2b19716ad4601.js.map
