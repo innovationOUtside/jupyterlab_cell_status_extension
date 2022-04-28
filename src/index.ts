@@ -15,14 +15,14 @@ import { ISettingRegistry } from '@jupyterlab/settingregistry';
  */
 const plugin: JupyterFrontEndPlugin<void> = {
   activate,
-  id: 'jupyterlab_cell_status:plugin',
+  id: 'jupyterlab_cell_status_extension:plugin',
   autoStart: true,
   optional: [ISettingRegistry],//, IKernelConnection]
 };
 
 function activate (
   app: JupyterFrontEnd, settingRegistry: ISettingRegistry | null): void {
-    console.log("jupyterlab_cell_status:plugin activating...");
+    console.log("jupyterlab_cell_status_extension:plugin activating...");
     if (settingRegistry) {
       settingRegistry
         .load(plugin.id)
@@ -72,7 +72,7 @@ function activate (
       }
     });  
 
-    console.log("jupyterlab_cell_status:plugin activated...");
+    console.log("jupyterlab_cell_status_extension:plugin activated...");
   }
 
 export default plugin;
