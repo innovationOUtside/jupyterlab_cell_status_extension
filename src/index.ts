@@ -28,16 +28,18 @@ function activate (
         .load(plugin.id)
         .then(settings => {
           console.log("jupyterlab_cell_status_extension:plugin: loading settings...");
-          //const root = document.documentElement;
+          const root = document.documentElement;
           const updateSettings = (): void => {
-            /*
+            console.log("jupyterlab_cell_status_extension:plugin: get setting...");
             const queue_color = settings.get('status_queue').composite as string;
-            const success_color = settings.get('status_success').composite as string;
+            /*const success_color = settings.get('status_success').composite as string;
             const error_color = settings.get('status_error').composite as string;
-            root.style.setProperty('--jp-cell-status-queue', queue_color);
-            root.style.setProperty('--jp-cell-status-success', success_color);
-            root.style.setProperty('--jp-cell-status-error', error_color);
             */
+            console.log("jupyterlab_cell_status_extension:plugin: set root param...");
+            root.style.setProperty('--jp-cell-status-queue', queue_color);
+            //root.style.setProperty('--jp-cell-status-success', success_color);
+            //root.style.setProperty('--jp-cell-status-error', error_color);
+            
           };
           updateSettings();
           console.log("jupyterlab_cell_status_extension:plugin: loaded settings...");
