@@ -33,12 +33,12 @@ function activate (
             console.log("jupyterlab_cell_status_extension:plugin: get setting...");
             const queue_color = settings.get('status_queue').composite as string;
             const success_color = settings.get('status_success').composite as string;
-            //const error_color = settings.get('status_error').composite as string;
+            const error_color = settings.get('status_error').composite as string;
             
             console.log("jupyterlab_cell_status_extension:plugin: set root param...");
             root.style.setProperty('--jp-cell-status-queue', queue_color);
             root.style.setProperty('--jp-cell-status-success', success_color);
-            //root.style.setProperty('--jp-cell-status-error', error_color);
+            root.style.setProperty('--jp-cell-status-error', error_color);
             
           };
           updateSettings();
