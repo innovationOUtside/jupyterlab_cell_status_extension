@@ -8,13 +8,13 @@
       "type": "string",
       "title": "Queue color",
       "description": "The queued-for-execution color for the cell run status",
-      "default": "rgba(165, 236, 246, 50%)"
+      "default": "rgba(165, 236, 246, 0.5)"
     },
     "status_success": {
       "type": "string",
       "title": "Success color",
       "description": "The base color for the successful cell run status",
-      "default": "rgba(0, 255, 0, 50%)"
+      "default": "rgba(0, 255, 0, 0.5)"
     },
     "status_error": {
       "type": "string",

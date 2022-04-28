@@ -42,7 +42,7 @@ function activate (
         })
         .catch(reason => {
           console.error('Failed to load settings for jupyterlab_cell_status_extension.', reason);
-      });
+        });
     }
 
     /*
