@@ -40,11 +40,11 @@ function activate(app, settingRegistry) {
                 console.log("jupyterlab_cell_status_extension:plugin: get setting...");
                 const queue_color = settings.get('status_queue').composite;
                 const success_color = settings.get('status_success').composite;
-                //const error_color = settings.get('status_error').composite as string;
+                const error_color = settings.get('status_error').composite;
                 console.log("jupyterlab_cell_status_extension:plugin: set root param...");
                 root.style.setProperty('--jp-cell-status-queue', queue_color);
                 root.style.setProperty('--jp-cell-status-success', success_color);
-                //root.style.setProperty('--jp-cell-status-error', error_color);
+                root.style.setProperty('--jp-cell-status-error', error_color);
             };
             updateSettings();
             console.log("jupyterlab_cell_status_extension:plugin: loaded settings...");
@@ -88,4 +88,4 @@ function activate(app, settingRegistry) {
 /***/ })
 
 }]);
-//# sourceMappingURL=lib_index_js.a552291658b98305908f.js.map
+//# sourceMappingURL=lib_index_js.1e9029946cc2450a39f4.js.map
