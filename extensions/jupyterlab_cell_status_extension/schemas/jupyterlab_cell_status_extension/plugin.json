@@ -1,6 +1,6 @@
 {
   "jupyter.lab.shortcuts": [],
-  "title": "jupyterlab_cell_status",
+  "title": "jupyterlab_cell_status_extension",
   "description": "jupyterlab_cell_status settings.",
   "type": "object",
   "properties": {

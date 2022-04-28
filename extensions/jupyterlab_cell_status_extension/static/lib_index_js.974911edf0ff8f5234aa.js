@@ -24,12 +24,12 @@ __webpack_require__.r(__webpack_exports__);
  */
 const plugin = {
     activate,
-    id: 'jupyterlab_cell_status:plugin',
+    id: 'jupyterlab_cell_status_extension:plugin',
     autoStart: true,
     optional: [_jupyterlab_settingregistry__WEBPACK_IMPORTED_MODULE_1__.ISettingRegistry],
 };
 function activate(app, settingRegistry) {
-    console.log("jupyterlab_cell_status:plugin activating...");
+    console.log("jupyterlab_cell_status_extension:plugin activating...");
     if (settingRegistry) {
         settingRegistry
             .load(plugin.id)
@@ -76,7 +76,7 @@ function activate(app, settingRegistry) {
             cell.inputArea.promptNode.classList.add("scheduled");
         }
     });
-    console.log("jupyterlab_cell_status:plugin activated...");
+    console.log("jupyterlab_cell_status_extension:plugin activated...");
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (plugin);
 
@@ -84,4 +84,4 @@ function activate(app, settingRegistry) {
 /***/ })
 
 }]);
-//# sourceMappingURL=lib_index_js.3486683a4b7f303cc2cc.js.map
+//# sourceMappingURL=lib_index_js.974911edf0ff8f5234aa.js.map

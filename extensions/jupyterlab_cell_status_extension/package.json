@@ -88,7 +88,7 @@
     "outputDir": "jupyterlab_cell_status_extension/labextension",
     "schemaDir": "schema",
     "_build": {
-      "load": "static/remoteEntry.e77b9c9a437812ee8d05.js",
+      "load": "static/remoteEntry.580a12bef942293ee1ce.js",
       "extension": "./extension",
       "style": "./style"
     }
