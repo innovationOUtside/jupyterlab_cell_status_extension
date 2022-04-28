@@ -11,7 +11,7 @@ import { NotebookActions } from '@jupyterlab/notebook';
 import { ISettingRegistry } from '@jupyterlab/settingregistry';
 
 /**
- * Initialization data for the jupyterlab-cell-flash extension.
+ * Initialization data for the jupyterlab_cell_status extension.
  */
 const plugin: JupyterFrontEndPlugin<void> = {
   activate,
@@ -41,7 +41,7 @@ function activate (
           settings.changed.connect(updateSettings);
         })
         .catch(reason => {
-          console.error('Failed to load settings for jupyterlab_cell_status_extension.', reason);
+          console.error('Failed to load settings for jupyterlab_cell_status.', reason);
         });
     }
 
