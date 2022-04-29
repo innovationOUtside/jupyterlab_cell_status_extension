@@ -30,12 +30,10 @@ function activate (
           console.log("jupyterlab_cell_status_extension:plugin: loading settings...");
           const root = document.documentElement;
           const updateSettings = (): void => {
-            console.log("jupyterlab_cell_status_extension:plugin: get setting...");
             const queue_color = settings.get('status_queue').composite as string;
             const success_color = settings.get('status_success').composite as string;
             const error_color = settings.get('status_error').composite as string;
             
-            console.log("jupyterlab_cell_status_extension:plugin: set root param...");
             root.style.setProperty('--jp-cell-status-queue', queue_color);
             root.style.setProperty('--jp-cell-status-success', success_color);
             root.style.setProperty('--jp-cell-status-error', error_color);
@@ -60,17 +58,22 @@ function activate (
     NotebookActions.executed.connect((_, args) => {
       const { cell } = args;
       const { success } = args;
+      // If we have a code cell, update the status
       if (cell.model.type == 'code') {
+        cell.inputArea.promptNode.classList.remove("scheduled");
         if (success)
           cell.inputArea.promptNode.classList.add("executed-success");
         else
           cell.inputArea.promptNode.classList.add("executed-error");
-          cell.inputArea.promptNode.classList.remove("scheduled");
+
       }
     });
 
     NotebookActions.executionScheduled.connect((_, args) => {
       const { cell } = args;
+      // If we have a code cell
+      // set the status class to "scheduled"
+      // and remove the other classes
       if (cell.model.type == 'code') {
         cell.inputArea.promptNode.classList.remove("executed-success");
         cell.inputArea.promptNode.classList.remove("executed-error");

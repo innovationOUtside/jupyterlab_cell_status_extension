@@ -1,15 +1,15 @@
 {
   "name": "jupyterlab_cell_status_extension",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Indicate cell status",
   "keywords": [
     "jupyter",
     "jupyterlab",
     "jupyterlab-extension"
   ],
-  "homepage": "https://github.com/github_username/jupyterlab_cell_status_extension",
+  "homepage": "https://github.com/innovation_outside/jupyterlab_cell_status_extension",
   "bugs": {
-    "url": "https://github.com/github_username/jupyterlab_cell_status_extension/issues"
+    "url": "https://github.com/innovation_outside/jupyterlab_cell_status_extension/issues"
   },
   "license": "BSD-3-Clause",
   "author": {
