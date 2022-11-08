@@ -2,10 +2,10 @@ name: Check Release
 on:
   push:
     branches:
-      - main
+      - never
   pull_request:
     branches:
-      - main
+      - never
 
 permissions:
   contents: write
