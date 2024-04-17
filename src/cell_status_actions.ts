@@ -26,6 +26,10 @@ export const create_cell_status_actions = (
         .composite as boolean;
       spoken_error_cellnum = settings.get('cell_status_error_spoken_alert')
         .composite as boolean;
+      //use_heartbeat = settings.get('cell_status_heartbeat')
+      //  .composite as boolean;
+      //heartbeat_pulse_s = settings.get('cell_status_heartbeat_period')
+      //  .composite as number;
     }
     //Cell flash - via https://github.com/jupyterlab-contrib/jupyterlab-cell-flash
     const element = cell.editor?.host;
