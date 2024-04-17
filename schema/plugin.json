@@ -1,0 +1,69 @@
+{
+  "jupyter.lab.shortcuts": [],
+  "title": "jupyterlab_cell_status_extension",
+  "description": "jupyterlab_cell_status settings.",
+  "type": "object",
+  "properties": {
+    "status_queue": {
+      "type": "string",
+      "title": "Pending color",
+      "description": "The pending (queued for execution) color for the cell run status",
+      "default": "rgba(165, 236, 246, 50%)"
+    },
+    "status_success": {
+      "type": "string",
+      "title": "Success color",
+      "description": "The base color for the successful cell run status",
+      "default": "rgba(0, 255, 0, 50%)"
+    },
+    "status_error": {
+      "type": "string",
+      "title": "Error color",
+      "description": "The base color for the errored cell run status",
+      "default": "rgba(255, 0, 0, 50%)"
+    },
+    "flash_enable": {
+      "type": "boolean",
+      "title": "Enable flash",
+      "description": "Whether to display cell flash on execution completion",
+      "default": true
+    },
+    "flash_duration": {
+      "type": "number",
+      "title": "Duration (seconds)",
+      "description": "The duration of the flash effect animation (in seconds)",
+      "default": 0.5
+    },
+    "cell_status_audio_success": {
+      "type": "boolean",
+      "title": "Successful cell execution audio",
+      "description": "Audible alert of successful cell execution completion status",
+      "default": false
+    },
+    "cell_status_audio_error": {
+      "type": "boolean",
+      "title": "Unsuccessful cell execution audio",
+      "description": "Audible alert of unsuccessful cell execution completion status",
+      "default": false
+    },
+    "cell_status_error_spoken_alert": {
+      "type": "boolean",
+      "title": "Say index of errored cell",
+      "description": "Spoken alert announcing cell number following unsuccessful cell execution",
+      "default": false
+    },
+    "cell_status_heartbeat": {
+      "type": "boolean",
+      "title": "[NOT YET IMPLEMENTED] Enable heartbeat",
+      "description": "Audible heartbeat for long running cells",
+      "default": false
+    },
+    "cell_status_heartbeat_period": {
+      "type": "number",
+      "title": "[NOT YET IMPLEMENTED] Period of hearthbeat",
+      "description": "Period in seconds between heartbeats",
+      "default": 5
+    }
+  },
+  "additionalProperties": false
+}
