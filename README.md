@@ -4,6 +4,18 @@
 
 A JupyterLab extension to display notebook cell status.
 
+Status indicators illustrate whether:
+
+- a cell is queued for execution (*blue*);
+- a cell executed successfully (*green*);
+- a cell executed unsuccessfully (i.e. with an error; *pink*)
+
+Various accessibility tools are also available, although they are disabled by default. These include:
+
+- successful cell run complietion (audible alert);
+- unsuccessful cell run completion (audible alert);
+- unsuccessful cell run completion (spoken announcement of index number of failed cell and error type);
+
 ![cell status indicators](images/cell-status-indicator.png)
 
 ![cell statis settings](images/cel-status-settings.png)
