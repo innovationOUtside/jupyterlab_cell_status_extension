@@ -4,6 +4,14 @@
 
 A JupyterLab extension to display notebook cell status.
 
+![cell status indicators](images/cell-status-indicator.png)
+
+![cell statis settings](images/cel-status-settings.png)
+
+Various accessibility tools are also available (old screenshot of accessibility related settings):
+
+![cell status accessibility tools](images/cell-statuis-accessibility.png)
+
 ## Requirements
 
 - JupyterLab >= 4.0.0
