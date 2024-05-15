@@ -2,13 +2,15 @@ import {
   JupyterFrontEnd,
   JupyterFrontEndPlugin
 } from '@jupyterlab/application';
-
 import { ISettingRegistry } from '@jupyterlab/settingregistry';
 
-import { create_cell_status_actions } from './cell_status_actions';
+import {
+  create_cell_status_actions,
+  update_cell_status_settings
+} from './cell_status_actions';
 
 /**
- * Initialization data for the jupyterlab_cell_status_extension extension.
+ * Initialisation data for the jupyterlab_cell_status_extension extension.
  */
 const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlab_cell_status_extension:plugin',
@@ -32,22 +34,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
           );
           const root = document.documentElement;
           const updateSettings = (): void => {
-            const queue_color = settings.get('status_queue')
-              .composite as string;
-            const success_color = settings.get('status_success')
-              .composite as string;
-            const error_color = settings.get('status_error')
-              .composite as string;
-            const flash_duration = settings.get('flash_duration')
-              .composite as number;
-            root.style.setProperty('--jp-cell-status-queue', queue_color);
-            root.style.setProperty('--jp-cell-status-success', success_color);
-            root.style.setProperty('--jp-cell-status-error', error_color);
-
-            root.style.setProperty(
-              '--jp-cell-flash-duration',
-              `${flash_duration}s`
-            );
+            update_cell_status_settings(settings, root);
           };
           updateSettings();
           console.log(
@@ -66,6 +53,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
             'Failed to load settings for jupyterlab_cell_status_extension.',
             reason
           );
+          create_cell_status_actions(null);
         });
     } else {
       create_cell_status_actions(null);

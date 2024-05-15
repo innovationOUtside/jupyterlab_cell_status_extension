@@ -1,5 +1,21 @@
+/*
+
+Functions related to audio and speech handling.
+
+- say: speak a message aloud;
+- play_tone: generate tone;
+- play_success: play a tone on successful execution of a cell;
+- play_error: play a tone on unsuccessful execution of a cell;
+              also accept a message that be be spoken after the tone;
+
+*/
+
+// Create an AudioContext object for generating feedback tones as required.
 const audioContext = new window.AudioContext();
 
+// Speak a message aloud using a browser SpeechSynthesisUtterance
+// The SpeechSynthesisUtterance object should be available
+// for garbage collection after the message is spoken.
 export const say = (message: string | null) => {
   if (message) {
     let utterance = new SpeechSynthesisUtterance(message);
@@ -7,9 +23,10 @@ export const say = (message: string | null) => {
   }
 };
 
+// Generate a tone using the AudioContext object.
 export function play_tone(
   frequency: number = 440,
-  duration: number = 1000, //milliseconds
+  duration_ms: number = 1000, //milliseconds
   volume: number = 0.1,
   type: OscillatorType = 'sine', //  "sine", "square", "sawtooth", "triangle",  "custom"
   message: string | null = null
@@ -40,10 +57,12 @@ export function play_tone(
   // Start the oscillator immediately
   oscillator.start();
 
+  // Set the gain envelope
   gain.gain.exponentialRampToValueAtTime(
     0.00001,
-    audioContext.currentTime + duration
+    audioContext.currentTime + duration_ms
   );
+
   // Stop the oscillator after the specified duration
   setTimeout(() => {
     oscillator.stop();
@@ -51,8 +70,9 @@ export function play_tone(
       setTimeout(() => {
         say(message);
       }, 100);
-  }, duration);
+  }, duration_ms);
 }
+
 export function play_success(msg: string | null = null) {
   play_tone(1000, 100, 0.1, 'sine', msg);
 }
@@ -61,14 +81,9 @@ export function play_error(msg: string | null = null) {
   play_tone(50, 400, 0.1, 'sawtooth', msg);
 }
 
-export function report_cellnum_error(cell_num: number | null) {
-  let utterance = new SpeechSynthesisUtterance(`Borked in cell ${cell_num}`);
-  window.speechSynthesis.speak(utterance);
-}
-
 /*
 // Notes for a possible heartbeat, if we can identify when a cell starts running
-// Extensions that support notificitions or cell execution timing may be relevnt here.
+// Extensions that support notifications or cell execution timing may be relevnt here.
 
 const hearbeatContext = new window.AudioContext();
 

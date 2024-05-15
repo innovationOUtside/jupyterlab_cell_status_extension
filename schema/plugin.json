@@ -4,35 +4,47 @@
   "description": "jupyterlab_cell_status settings.",
   "type": "object",
   "properties": {
-    "status_queue": {
+    "cell_status_enable": {
+      "type": "boolean",
+      "title": "Enable cell status display",
+      "description": "Whether to display cell execution status",
+      "default": true
+    },
+    "cell_status_queue": {
       "type": "string",
       "title": "Pending color",
       "description": "The pending (queued for execution) color for the cell run status",
       "default": "rgba(165, 236, 246, 50%)"
     },
-    "status_success": {
+    "cell_status_success": {
       "type": "string",
       "title": "Success color",
       "description": "The base color for the successful cell run status",
       "default": "rgba(0, 255, 0, 50%)"
     },
-    "status_error": {
+    "cell_status_error": {
       "type": "string",
       "title": "Error color",
       "description": "The base color for the errored cell run status",
       "default": "rgba(255, 0, 0, 50%)"
     },
-    "flash_enable": {
+    "cell_flash_enable": {
       "type": "boolean",
       "title": "Enable flash",
       "description": "Whether to display cell flash on execution completion",
       "default": true
     },
-    "flash_duration": {
+    "cell_flash_duration": {
       "type": "number",
-      "title": "Duration (seconds)",
-      "description": "The duration of the flash effect animation (in seconds)",
+      "title": "Cell flash duration (seconds)",
+      "description": "The duration of the cell flash effect animation (in seconds)",
       "default": 0.5
+    },
+    "cell_flash_colour": {
+      "type": "string",
+      "title": "Cell flash colour",
+      "description": "The colour of the cell flash effect animation",
+      "default": "rgba(255, 255, 0, 50%)"
     },
     "cell_status_audio_success": {
       "type": "boolean",
@@ -48,7 +60,7 @@
     },
     "cell_status_error_spoken_alert": {
       "type": "boolean",
-      "title": "Say index of errored cell",
+      "title": "Speak cell error type",
       "description": "Spoken alert announcing cell number following unsuccessful cell execution",
       "default": false
     },

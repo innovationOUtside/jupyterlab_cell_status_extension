@@ -13,19 +13,19 @@
   --jp-cell-flash-duration: 0.5s;
 }
 
-.executed-success {
+.cell-status-success {
   background-color: var(--jp-cell-status-success);
 }
 
-.executed-error {
+.cell-status-error {
   background-color: var(--jp-cell-status-error);
 }
 
-.scheduled {
+.cell-status-scheduled {
   background-color: var(--jp-cell-status-pending);
 }
 
-.flash-effect {
+.cell-flash-effect {
   animation: flash var(--jp-cell-flash-duration);
   animation-timing-function: ease-in;
 }
