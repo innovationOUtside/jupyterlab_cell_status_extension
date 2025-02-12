@@ -6,6 +6,9 @@ build-backend = "hatchling.build"
 name = "jupyterlab_cell_status_extension"
 readme = "README.md"
 license = { file = "LICENSE" }
+authors = [
+    {name = "Tony Hirst", email = "tony.hirst@gmail.com"},
+]
 requires-python = ">=3.8"
 classifiers = [
     "Framework :: Jupyter",
@@ -26,6 +29,11 @@ dependencies = [
     "jupyterlab-celltagsclasses==0.5.1"
 ]
 dynamic = ["version", "description", "authors", "urls", "keywords"]
+
+
+[project.urls]
+repository = "https://github.com/innovationOUtside/jupyterlab_cell_status_extension"
+
 
 [tool.hatch.version]
 source = "nodejs"
